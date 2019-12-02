@@ -1,0 +1,11 @@
+# 계산
+print(2 + 3)
+print(2-3)
+print(2*3)
+print("안녕"*20)
+print("안녕"+"hello")
+print("안녕","hello")
+print("안녕","hello",sep="ㅁㅁ")
+print(2**3)
+print(2*31+2)
+print("멍청이","바보")
