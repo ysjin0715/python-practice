@@ -79,3 +79,27 @@ print('말 한마디로\\천 냥 빚을 갚는다')
 print('말 한마디로\"천 냥 빚을 갚는다')
 print('말 한마디로\'천 냥 빚을 갚는다')
 print('doesn\'t')
+
+#15.
+slist=['영어','수학','사회','과학']
+list1=[1,2,3,4,5]
+list2=['a','b','c','d']
+print(slist)
+print(list1)
+print(list2)
+
+list=[]
+list.append(1)
+list.append(2)
+list.append(6)
+list.append(3)
+list1.append(7)
+
+print(list)
+print(list1)
+
+#16.
+slist=['영어','수학','사회','과학']
+
+print(slist[0])
+print(slist[1])

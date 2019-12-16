@@ -1,6 +1,6 @@
 import turtle
 t=turtle.Turtle()
-t.shape="turtle"
+t.shape("turtle")
 
 #1
 s=turtle.textinput('','이름을 입력하십시오: ')
@@ -35,4 +35,52 @@ print('올해는 ',str(thisYear),'입니다.')
 age=int(input('몇 살이신지요? '))
 future=2050-thisYear
 fage=future+age
-print('2050년에는',str(fage),'살 이시군요.')
+print('2050년에는',str(fage),'살 이시군요.')\
+
+
+#5.
+list_name=[]
+list_name.append(input('친구의 이름을 입력하시오: '))
+list_name.append(input('친구의 이름을 입력하시오: '))
+list_name.append(input('친구의 이름을 입력하시오: '))
+list_name.append(input('친구의 이름을 입력하시오: '))
+list_name.append(input('친구의 이름을 입력하시오: '))
+
+print(list_name)
+print(list_name[0])
+
+#6.
+color_list=['yellow','red','blue','green']
+
+#첫번째 원 완성
+t.fillcolor(color_list[0])
+t.begin_fill()
+t.circle(100)
+t.end_fill()
+
+#이동
+t.goto(40,0)
+
+#두번째 원 완성
+t.fillcolor(color_list[1])
+t.begin_fill()
+t.circle(100)
+t.end_fill()
+
+#이동
+t.goto(80,0)
+
+#세번째 원 완성
+t.fillcolor(color_list[2])
+t.begin_fill()
+t.circle(100)
+t.end_fill()
+
+#이동
+t.goto(120,0)
+
+#네번째 원 완성
+t.fillcolor(color_list[3])
+t.begin_fill()
+t.circle(100)
+t.end_fill()
