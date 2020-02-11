@@ -89,3 +89,73 @@ else:
 import time
 time.sleep(2)
 print('게임을 종료합니다')
+
+#7.
+user_name='ilovepython'
+user_pw='123456'
+id=input('아이디를 입력하시오: ')
+if id==user_name:
+    pw=input('패스워드를 입력하시오: ')
+    if pw==user_pw:
+        print('환영합니다.')
+    else:
+        print('패스워드를 찾을 수 없습니다')
+else:
+    print('아이디를 찾을 수 없습니다')
+
+# #8.
+import random
+kick_list=['왼쪽 상단','왼쪽 하단','중앙','오른쪽 상단','오른쪽 하단']
+computer=random.choice(kick_list)
+user_kick=input('어디로 공을 찰까요? (왼쪽 상단, 왼쪽 하단, 중앙, 오른쪽 상단, 오른쪽 하단) : ')
+# if user_kick==kick_list[0] or user_kick==kick_list[1] or user_kick==kick_list[2] or user_kick==kick_list[3] or user_kick==kick_list[4]:
+#     if user_kick==computer:
+#         print('패널티킥이 막혔습니다!')
+#     else:
+#         print('패널티킥에 성공하셨습니다!')
+# else:
+#     print('올바른 방향에 차지 않았습니다')
+
+if user_kick==computer:
+    print('패널티킥이 막혔습니다!')
+elif user_kick in kick_list:
+    print('패널티킥이 성공했습니다!')
+else:
+    print('올바른 방향에 차십시오!')
+
+
+# 9.
+t.up()
+t.goto(0,0)
+t.down()
+plist=['사각형','삼각형','원']
+s=turtle.textinput("",'도형을 입력하시오: ')
+
+if s in plist:
+   if s=="사각형":
+       c=90
+       w = int(turtle.textinput("", "가로: "))
+       h = int(turtle.textinput('', '세로: '))
+       t.fd(w)
+       t.left(c)
+       t.fd(h)
+       t.left(c)
+       t.fd(w)
+       t.left(c)
+       t.fd(h)
+
+   elif s=="삼각형":
+       c=120
+       w2=int(turtle.textinput('','한 변의 길이: '))
+       t.fd(w2)
+       t.left(c)
+       t.fd(w2)
+       t.left(c)
+       t.fd(w2)
+       t.left(c)
+
+   elif s=="원":
+       r=int(turtle.textinput('','반지름의 길이: '))
+       t.circle(r)
+else:
+    print("해당 도형은 지원하지 않습니다.")
