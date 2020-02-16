@@ -63,10 +63,9 @@ s.onscreenclick(drawit)
 #pycharm에서는 정상적으로 작동하지 않는다.
 #python에서는 정상적으로 작동한다.
 
-#4.
+# 4.
 def draw(x,y):
     t.goto(x,y)
-    t.pendown()
 
 t.pensize(10)
 s=turtle.Screen()
@@ -77,21 +76,79 @@ s.onkey(t.pendown,'Down')
 s.listen()
 
 #5. 나무그리기
+def tree(length):
+
+    if length>50: #length가 5보다 크면 순환호출을 한다.
+        t.fd(length) #거북이가 length만큼 선을 그린다.
+        t.right(20) #오른쪽으로 20도 회전한다.
+        tree(length-15) #(length-15)를 인수로 tree()를 순환 호출한다.
+
+        t.left(40) #왼쪽으로 40도 회전한다.
+        tree(length-15) #(length-15)를 인수로 tree()를 순환 호출한다.
+        t.right(20) #오른쪽으로 20도 회전한다.
+
+        t.backward(length) #length만큼 뒤로 간다. 제자리로 돌아온다.
+
 t.left(90)
-def draw_tree(length):
-    t.fd(length)
-    t.left(180)
-    t.fd(length/2)
+tree(90)
 
-    t.left(120)
-    t.fd(length/2)
-    t.left(180)
-    t.fd(length/2)
+#6.막대그래프 그리기
+def makdae(height):
+    t.begin_fill()
+    t.fd(50)
+    t.left(90)
+    t.fd(height)
+    t.left(90)
+    t.fd(50)
+    t.write(str(height), font=('Times New Roman', 20, 'bold'))
+    t.left(90)
+    t.fd(height)
+    t.left(90)
+    t.end_fill()
+    t.fd(50)
 
-    t.right(60)
-    t.fd(length/2)
-    t.right(180)
-    t.fd(length/2)
 
+t.fillcolor('red')
 
-draw_tree(100)
+t.up()
+t.goto(-200,-200)
+t.down()
+
+data=[120,56,309,220,156,23,98]
+
+for c in data:
+    makdae(c)
+
+# 7.터틀 메이즈 러너
+def miro(x,y):
+    for i in range(2):
+        t.up()
+        if i==1:
+            t.goto(x+100,y+100)
+        else:
+            t.goto(x-100,y-100)
+        t.down()
+        t.fd(300)
+        t.right(90)
+        t.fd(300)
+        t.left(90)
+        t.fd(300)
+
+def turn_left():
+    t.left(10)
+    t.forward(10)
+
+def turn_right():
+    t.right(10)
+    t.fd(10)
+
+miro(-200,200)
+t.up()
+t.goto(-200,200)
+t.down()
+
+screen=turtle.Screen()
+screen.onkey(turn_left,"Left")
+screen.onkey(turn_right,"Right")
+screen.listen()
+screen.mainloop()
