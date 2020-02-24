@@ -4,16 +4,15 @@ t=turtle.Turtle()
 t.shape('turtle')
 
 color=[]
-#input을 통해 색을 입력할 경우, 글자 하나하나를 항목으로 인식
-# for i in range(5):
-#     s=turtle.textinput('','오륜기에 넣을 색을 입력하시오(영어가 아니면 인식하지 못한다구!')
-#     color+=s
+for i in range(5):
+    s=turtle.textinput('','오륜기에 넣을 색을 입력하시오(영어가 아니면 인식하지 못한다구!')
+    color.append(s)
 
-color.append('red')
-color.append('orange')
-color.append('yellow')
-color.append('blue')
-color.append('purple')
+# color.append('red')
+# color.append('orange')
+# color.append('yellow')
+# color.append('blue')
+# color.append('purple')
 
 t.up()
 t.goto(-200,0)
