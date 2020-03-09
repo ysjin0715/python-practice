@@ -1,0 +1,3 @@
+smile 웃다
+cry 울다
+python 파이썬
