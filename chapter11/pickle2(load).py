@@ -1,4 +1,4 @@
-# pickle : 피클파일 출력하ㅣㄱ
+# pickle : 피클파일 출력하기
 import pickle
 
 # 파일을 읽개 형태로 열어 file변수에 저장한다.
